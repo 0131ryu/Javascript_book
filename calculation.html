@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = 15;
+        var num2 = 2;
+        var result;
+        result = num1 + num2;
+        document.write(result, "<br>");
+        result = num1 - num2;
+        document.write(result, "<br>");
+        result = num1 * num2;
+        document.write(result, "<br>");
+        result = num1 / num2;
+        document.write(result, "<br>");
+        result = num1 % num2;
+        document.write(result, "<br>");
+
+        var t1 = "개미는 뚠뚠 "
+        var t2 = "오늘도 뚠뚠 "
+        var t3 = 123456789
+        var t4 = "만큼 일을 하네"
+
+        result = t1 + t2 + t3 + t4;
+        document.write(result, "<br>");
+        document.write(typeof result, "<br>"); //string
+
+        var num3 = 10;
+        var num4 = 2;
+
+        num3 += num4;
+        document.write(num3, "<br>");
+        num3 -= num4;
+        document.write(num3, "<br>");
+        num3 *= num4;
+        document.write(num3, "<br>");
+        num3 %= num4;
+        document.write(num3, "<br>");
+
+        var str = "<table border='1'>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>"
+            str += "</tr>"
+            str += "</table>"
+        document.write(str);
+        document.write(typeof str, "<br>"); //string
+
+        var num5 = 10;
+        var num6 = 20;
+        var result;
+
+        num5--;
+        document.write(num5, "<br>"); //9
+ 
+        num5++;
+        document.write(num5, "<br>"); //10
+
+        result = num6++;
+        document.write(result, "<br>"); //result: 20, num6=21
+
+        result = ++num6;
+        document.write(result, "<br>"); //result: 22, num6: 22
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var quarter = [1200, 1300, 1000, null];
+
+      var agv = parseInt((quarter[0] + quarter[1] + quarter[2]) / 3);
+
+      quarter[3] = prompt("4분기 판매량은?", "0");
+
+      var result =
+        quarter[3] >= agv
+          ? document.write("판매량이 평균 이상입니다.")
+          : document.write("판매량이 평균 미달입니다.");
+
+      document.write(result);
+    </script>
+  </body>
+</html>
