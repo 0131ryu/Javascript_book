@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var walkAmount = prompt("당신은 하루에 몇 보를 걷나요?", "0");
+
+      if (walkAmount >= 10000) {
+        document.write("매우 좋은 습관을 지니고 계신군요!", "<br>");
+      } else {
+        document.write("좀 더 분발합시다!", "<br>");
+      }
+      document.write("======The End=====", "<br>");
+
+      var userName = prompt("방문자 이름은?", "");
+
+      if (userName) {
+        document.write(userName + "님 반갑습니다! 방문을 환영합니다!", "<br>");
+      }
+
+      var num = prompt("당신이 좋아하는 숫자는?", "0");
+
+      if (num % 2 == 0) {
+        document.write("짝수입니다.", "<br>");
+      } else {
+        document.write("홀수입니다.", "<br>");
+      }
+
+      var authResult = confirm("정말로 회원을 탈퇴하십니까?");
+
+      if (authResult) {
+        document.write("탈퇴처리 되었습니다.");
+      } else {
+        document.write("탈퇴 취소되었습니다.");
+      }
+
+      var month = prompt("몇 월인가요? ver1");
+
+      if (month == 12 || month == 1 || month == 2) {
+        document.write("겨울 입니다.");
+      } else if (month == 3 || month == 4 || month == 5) {
+        document.write("봄 입니다.");
+      } else if (month == 6 || month == 7 || month == 8) {
+        document.write("여름 입니다.");
+      } else if (month == 9 || month == 10 || month == 11) {
+        document.write("가을 입니다.");
+      }
+
+      var mon = prompt("몇 월인가요? ver2");
+
+      if (mon >= 9 && mon <= 11) {
+        document.write("가을입니다.");
+      } else if (mon >= 6 && mon <= 8) {
+        document.write("여름입니다.");
+      } else if (mon >= 3 && mon <= 5) {
+        document.write("봄입니다.");
+      } else {
+        document.write("겨울입니다.");
+      }
+
+      var id = "test123";
+      var pw = "112233";
+
+      var user_id = prompt("아이디는?");
+      var user_pw = prompt("비밀번호는?");
+
+      if (id === user_id) {
+        //아이디가 일치할 경우
+        if (pw === user_pw) {
+          document.write(user_id + "님 반갑습니다.");
+        } else {
+          alert("비밀번호가 일치하지 않습니다.");
+          location.reload(); //브라우저 새로고침
+        }
+      } else {
+        alert("아이디가 일치하지 않습니다.");
+        location.reload();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
