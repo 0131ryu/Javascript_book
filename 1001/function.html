@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="theBody">
+    <script>
+      var count = 0;
+
+      myFnc();
+
+      function myFnc() {
+        count++;
+        document.write("hello" + count, "<br>");
+      }
+
+      myFnc();
+
+      var theFnc = function () {
+        count++;
+        document.write("bye" + count, "<br>");
+      };
+
+      theFnc();
+
+      var color = ["white", "yellow", "aqua", "purple"];
+
+      var i = 0;
+      function changeColor() {
+        i++;
+        if (i >= color.length) {
+          i = 0;
+        }
+        var bodyTag = document.getElementById("theBody");
+        bodyTag.style.backgroundColor = color[i];
+      }
+
+      function myFnc2(name, area) {
+        document.write("안녕하세요. " + name + "입니다.", "<br>");
+        document.write("사는 곳은 " + area + "입니다.", "<br><br>");
+      }
+
+      myFnc2("코난", "서울");
+      myFnc2("하인성", "부산");
+
+      var rightId = "korea";
+      var rightPw = "1234";
+
+      function login(id, pw) {
+        if (id === rightId) {
+          if (pw === rightPw) {
+            document.write(id + "님의 방문을 환영합니다.");
+          } else {
+            alert("잘못된 비밀번호입니다.");
+          }
+        } else {
+          alert("존재하지 않는 회원정보입니다.");
+        }
+      }
+
+      var userId = prompt("아이디를 입력하세요", "");
+      var userPw = prompt("비밀번호를 입력하세요", "");
+
+      login(userId, userPw);
+    </script>
+
+    <button onclick="changeColor()">배경색 바꾸기</button>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function testAvg(arrDate) {
+        var sum = 0;
+        for (var i = 0; i < arrDate.length; i++) {
+          sum += Number(prompt(arrDate[i] + " 점수는?", "0"));
+        }
+
+        var avg = sum / arrDate.length;
+        return avg;
+      }
+
+      var arrSubject = ["국어", "수학", "영어"];
+      var result = testAvg(arrSubject);
+
+      document.write("평균 점수는 " + result + "점 입니다.", "<br>");
+
+      var num = 1;
+      function gallery(direct) {
+        if (direct) {
+          if (num === 8) return;
+          num++;
+        } else {
+          if (num === 1) return;
+          num--;
+        }
+
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src", "img/img0" + num + ".png");
+      }
+
+      var num1 = 0;
+      function testFnc() {
+        num1++;
+        document.write(num1, "<br>");
+        if (num1 == 10) return;
+
+        testFnc();
+      }
+
+      testFnc();
+
+      (function () {
+        var num2 = 100;
+        function menu() {
+          num2 += 100;
+          alert(num2);
+        }
+        menu();
+      })();
+
+      (function () {
+        var num3 = 100;
+        function menu() {
+          alert(num3);
+        }
+      })();
+    </script>
+
+    <div id="galleryZone">
+      <p><img src="img/img01.png" id="photo" alt="" /></p>
+      <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+      </p>
+    </div>
+  </body>
+</html>
