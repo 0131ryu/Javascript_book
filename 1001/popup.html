@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.open(
+        "popup.html",
+        "pop1",
+        "width=300, height=400, left=300, top=50"
+      );
+    </script>
+  </head>
+  <body>
+    <p>
+      <img src="img/img01.png" usemap="#into" alt="신간 책 소개" />
+      <map name="intro" id="intro">
+        <area
+          shape="rect"
+          coord="203,368,280,390"
+          href="#"
+          alt="창 닫기"
+          onclick="window.close();"
+        />
+        <!--창 닫기 클릭 시 현재 창 닫음-->
+      </map>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [30, "따르릉", true];
+
+      document.write("<h3>배열값 가져오기-1</h3>");
+      document.write(arr[0], "<br>");
+      document.write(arr[1], "<br>");
+      document.write(arr[2], "<br>");
+
+      document.write("<h3>배열값 가져오기-2</h3>");
+      for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i], "<br>");
+      }
+
+      document.write("<h3>배열값 가져오기-3</h3>");
+      for (i in arr) {
+        document.write(arr[i], "<br>");
+      }
+
+      var arr_1 = ["사당", "교대", "방배", "강남"];
+      var arr_2 = ["신사", "압구정", "옥수"];
+
+      var result = arr_1.join("-"); //배열에 저장된 값을 지정한 문자로 연결하여 하나의 문자열로 반환
+      console.log(result);
+
+      result = arr_1.concat(arr_2); //2개의 배열을 하나의 배열로 만들어 반환
+      console.log(result);
+
+      result = arr_1.slice(1, 3); //arr_1[1] 이전의 값 잘라냄, 그리고 남은 값 반환(arr_1[3]도 잘라짐)
+      console.log(result);
+
+      arr_1.sort(); //오름차순으로 정렬
+      console.log(arr_1);
+
+      arr_2.reverse(); //배열 순서를 거꾸로 뒤집음
+      console.log(arr_2);
+
+      var greenArr = ["교대", "방배", "강남"];
+      var yellowArr = ["미금", "정자", "수서"];
+
+      greenArr.splice(2, 1, "서초", "역삼"); //greenArr[2]의 값 1개 잘라내고 나머지 값 넣음
+      console.log(greenArr); //['교대', '방배', '서초', '역삼']
+
+      var data1 = yellowArr.pop(); //yellowArr의 마지막 인덱스의 데이터를 data1에 저장
+      var data2 = greenArr.shift(); //yellowArr의 가장 앞쪽 인덱스의 데이터를 data2에 저장
+
+      yellowArr.push(data2); //data2에 저장된 데이터를 yellowArr 배열의 마지막 인덱스에 밀어 넣음
+      console.log(yellowArr); //['미금', '정자', '교대']
+
+      yellowArr.unshift(data1); //data1에 저장된 데이터를 yellowArr 배열의 가장 앞쪽에 밀어 넣음
+      console.log(yellowArr); // ['수서', '미금', '정자', '교대']
+    </script>
+  </body>
+</html>
