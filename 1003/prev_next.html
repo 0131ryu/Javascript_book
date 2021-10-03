@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <!--네트워크 방식
+    <script src="https://cdnjs.cloudflare.comajax/libs/jquery/1.12.4/juery.js"></script>-->
+    <script>
+      $(function () {
+        //형(이전) / 동생(다음) 요소 선택자
+        var style_1 = {
+          "background-color": "lightgreen",
+          border: "2px dashed black",
+        };
+        var style_2 = {
+          "background-color": "lightblue",
+          border: "2px dashed black",
+        };
+
+        /*$(".txt").prev().css(style_1);
+        $(".txt" + p).css(style_2);
+        $(".txt").next().next().css(style_2);*/
+
+        $(".txt").prevAll().css(style_1);
+        $(".txt").nextAll().css(style_2);
+
+        //전체 형제 요소 선택자
+        //$(".txt").siblings().css(style_2);
+
+        //범위 제한 전체 형/동생 요소 선택자
+        $(".txt2").prevUntil(".title").css(style_1);
+        $(".txt2").nextUntil(".txt6").css(style_2);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>인접 관계 선택자</h1>
+      <p class="txt">내용1</p>
+      <p class="txt2">내용2</p>
+      <p>내용3-2</p>
+      <p>내용3-3</p>
+      <p class="txt6">내용4-3</p>
+    </div>
+  </body>
+</html>

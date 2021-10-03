@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script>
+      $(function () {
+        /*$(".txt1").parents().css({
+          border: "2px solid dashed black",
+        });
+
+        $(".txt2").parents(div).css({
+          border: "2px solid dashed blue",
+        }); */
+
+        //가장 가까운 상위요소 선택자
+        $(".txt1").closest("div").css({
+          border: "2px solid #f00",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 class="title">선택자</h1>
+    <section>
+      <div>
+        <p class="txt1">내용</p>
+      </div>
+    </section>
+    <div>
+      <p class="txt2">내용</p>
+    </div>
+  </body>
+</html>
