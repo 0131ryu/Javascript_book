@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script>
+      $(function () {
+        //each()/$.each() 메서드
+        /*
+            $("요소 선택").each(function(매개변수1, 매개변수2) {}) -> 저장된 요소의 개수만큼 메소드를 반복 실행
+            $.each("요소 선택"), function(매개변수1, 매개변수2) {})  -> 저장된 요소의 개수만큼 메소드를 반복 실행
+            $("요소 선택").each(function() {$(this)}) -> 배열에 저장된 요소의 개수만큼 메서드 반복 실행
+            $.each($("요소 선택"), function() {$(this)}) -> 배열에 저장된 요소의 개수만큼 메서드 반복 실행
+        */
+        var obj = [
+          {
+            area: "서울",
+          },
+          {
+            area: "부산",
+          },
+          {
+            area: "전주",
+          },
+        ];
+
+        $(obj).each(function (i, o) {
+          //3번 반복
+          console.log(i + " : " + o);
+        });
+        console.log("==========The End=========");
+
+        $.each($("#menu2 li"), function (i, o) {
+          //4번 반복
+          console.log(i + " : ", o);
+        });
+        console.log("==========The End2=========");
+
+        $.each($("#menu2 li"), function (i) {
+          //4번 반복
+          console.log(i + " : ", $(this));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+      <li>내용 1-1</li>
+      <li>내용 1-2</li>
+      <li>내용 1-3</li>
+      <li>내용 1-4</li>
+    </ul>
+    <ul id="menu2">
+      <li>내용 2-1</li>
+      <li>내용 2-2</li>
+      <li>내용 2-3</li>
+      <li>내용 2-4</li>
+    </ul>
+  </body>
+</html>
