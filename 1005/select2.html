@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script>
+      /*
+        $("요소 선택:contains(텍스트)") : 선택한 요소 중 지정한 텍스트를 포함하는 요소만 선택
+        $("요소 선택:contents() : 선택한 요소의 하위 요소 중 1깊이의 텍스트와 태그 노드 선택
+        $("요소 선택:has(요소명)") / $("요소 선택").has("요소명") : 선택한 요소 중 지정한 태그를 포함하는 요소만 선택
+        $("요소 선택:not(제외할 요소 선택") / $("요소 선택").not(제외할 요소 선택) : 선택한 요소 중 지정한 요소만 제외한 채 선택
+        $("요소 선택").탐색 선택자().end() : 필터링 되기 이전의 선택자가 적용
+        */
+      $(function () {
+        $("#inner_1 p:contains(내용1)").css({ "background-color": "#ff0" });
+        $("#inner_1 p:has(strong)").css({ "background-color": "#0ff" });
+        $("#outer_wrap").contents().css({ border: "1px dashed #00f" });
+        $("#inner_2 p").not(":first").css({ "background-color": "#0f0" });
+        $("#inner_2 p").eq(2).end().css({ color: "#f00" });
+
+        /*
+        find/filter의 차이점 : 필터링할 대상이 하위요소인지 선택한 요소인지 구분
+        $("요소 선택").find("하위 요소 중 필터링할 요소 선택") 
+        $("요소 선택").filter("선택한 요소 중 필터링할 요소 선택")
+        */
+        $("#inner_2").find(".txt1").css({ "background-color": "#ff0" }); //id가 inner_2인 요소인 하위 요소 중 class가 txt1인 요소 선택
+        $("#inner_2").filter(".txt2").css({ "background-color": "#0ff" }); //id가 inner_2인 요소인 하위 요소 중 class값이 txt2인 요소 선택
+
+        $("#inner_3 p")
+          .filter(function (idx, obj) {
+            //id값이 inner_3이며 하위 요소인 p의 개수만큼 익명함수가 실행됨
+            console.log(idx);
+            return idx % 2 == 0;
+          })
+          .css({ "background-color": "#0ff" });
+
+        /*is()메서드
+          $("요소 선택").is(":[checked | selected | visible | hidden | animated]")
+          checked : 선택한 체크 박스 혹은 라디오 버튼 요소가 checked 상태이면 true, 아니면 false
+          selected : 선택한 상자에 옵션 요소가 selected 상태면 true, 아니면 false
+          visible : 선택한 요소가 보이면 true, 아니면 false
+          hidden : 선택한 요소가 숨겨진 상태면 true, 아니면 false
+          animated : 선택한 요소가 animated면 true, 아니면 false
+          */
+        var result_4 = $("#inner_4 p").eq(0).is(":visible");
+        console.log(result_4);
+
+        var result_5 = $("#inner_4 p").eq(1).is(":visible");
+        console.log(result_5);
+
+        var result_6 = $("#chk6").is(":checked");
+        console.log(result_6);
+
+        var result_7 = $("chk7").is(":checked");
+        console.log(result_7);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="outer_wrap">
+      <h1>콘텐츠 탐색 선택자</h1>
+      <section id="innter_1">
+        <h1>contains(), contents(), has()</h1>
+        <p>
+          <span>내용1</span>
+        </p>
+        <p>
+          <span>내용2</span>
+        </p>
+        <p>
+          <span>내용3</span>
+        </p>
+      </section>
+      <section id="inner_2">
+        <h1>not(), end()</h1>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p>내용6</p>
+      </section>
+
+      <h1>콘텐츠 탐색 선택자2</h1>
+      <section id="inner_2">
+        <h2>find(), filter()</h2>
+        <p class="txt1">내용1</p>
+        <p class="txt2">내용2</p>
+      </section>
+      <section id="inner_3">
+        <h2>filter(function)</h2>
+        <p>index 0</p>
+        <p>index 1</p>
+        <p>index 2</p>
+        <p>index 3</p>
+      </section>
+
+      <h1>is()</h1>
+      <section id="inner_4">
+        <h2>문단 태그 영역</h2>
+        <p>내용1</p>
+        <p style="display: none">내용2</p>
+      </section>
+
+      <section id="inner_5">
+        <h2>폼 태그 영역</h2>
+        <p>
+          <input type="checkbox" name="chk6" id="chk6" checked />
+          <label for="chk6">체크1</label>
+          <input type="checkbox" name="chk7" id="chk7" />
+          <label for="chk7">체크2</label>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
