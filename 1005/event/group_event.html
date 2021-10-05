@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+    <script>
+      $(function () {
+        $(".btn_1.on").on("mouseover focus", function () {
+          alert("HELLO");
+        });
+        $(".btn_1").addClass("on"); //작동 안 됨
+
+        $(document).on("mouseover focus", ".btn_2.on", function () {
+          alert("WELCOME");
+        });
+        $(".btn_2").addClass("on"); //on 메서드 : 선택한 요소에 이벤트를 등록한 이후에도 새롭게 생성되거나 복제된 요소에 이벤트 적용 가능
+
+        $(".btn_wrap").delegate(".btn_3.on", "mouseover focus", function () {
+          alert("hello");
+        });
+        $(".btn_3").addClass("n");
+
+        $(document).one("mouseover focus", ".btn_4.on", function () {
+          //이벤트 1회만 발생
+          alert("welcome");
+        });
+        $(".btn_4").addClass("on");
+
+        /*off()/unbind()/undelegate()*/
+        $(".btn_5").on("mouseover", function () {
+          alert("hello!");
+        });
+        $(document).on("mouseover", "btn_6", function () {
+          alert("welcome!");
+        });
+        var btn_6 = $('<p><button class="btn_6">버튼6</button></p>');
+        $("#wrap").append(btn_6);
+
+        $(".del_5").on("click", function () {
+          $(".btn_5").off("mouseover");
+        });
+        $(".del_6").on("click", function () {
+          $(document).off("mouseover", "btn_6");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <p><button class="btn_1">버튼1</button></p>
+      <p><button class="btn_2">버튼2</button></p>
+      <p class="btn_wrap">
+        <button class="btn_3">버튼3</button>
+        <button class="btn_5">버튼5</button>
+      </p>
+      <p><button class="btn_4">버튼4</button></p>
+      <p>
+        <button class="del_5">버튼 5 이벤트 해제</button>
+        <button class="del_6">버튼 6 이벤트 해제</button>
+      </p>
+    </div>
+  </body>
+</html>
