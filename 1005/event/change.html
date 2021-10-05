@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+    <script>
+      $(function () {
+        $("#rel_site").on("change", function () {
+          $(".txt").text($(this).val());
+        });
+
+        /*키보드 이벤트*/
+        $(document).on("keydown", keyEventFnc);
+        function keyEventFnc(e) {
+          var direct = "";
+
+          switch (e.keyCode) {
+            case 37:
+              direct = "LEFT";
+              break;
+            case 38:
+              direct = "TOP";
+              break;
+            case 39:
+              direct = "RIGHT";
+              break;
+            case 40:
+              direct = "BOTTOM";
+              break;
+          }
+          if (direct) $("#user_id").val(direct);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <select id="rel_site">
+      <option value="">사이트 선택</option>
+      <option value="www.google.com">구글</option>
+      <option value="www.naver.com">네이버</option>
+      <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+    <p><input type="text" name="user_id" id="user_id" /></p>
+  </body>
+</html>

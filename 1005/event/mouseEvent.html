@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+    <script>
+      $(function () {
+        /*
+          mousecenter() : 대상 요소의 경계 범위에 마우스 포인터가 들어오면 이벤트 발생
+          mouseleave() : 대상 요소의 경계 범위에서 마우스 포인터가 완전히 벗어나면 이벤트 발생
+          mouseover() : 대상 요소에 마우스 포인터가 올라가면 발생
+          mouseout() : 대상 요소에서 마우스 포인터가 벗어나면 발생
+          mousemove()
+        */
+        $("#box_1").on("mouseout", function () {
+          $("#box_1").css({ "background-color": "yellow" });
+        });
+
+        $("#box_2").on("mouseleave", function () {
+          $("#box_2").css({ "background-color": "pink" });
+        });
+
+        $(document).on("mousemove", function (e) {
+          //e는 매개변수(이벤트 객체)
+          $(".posX").text(e.pageX);
+          $(".posY").text(e.pageY);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>mouseout</h1>
+    <div id="box_1">
+      <p><a href="#">내용1</a></p>
+      <p><a href="#">내용2</a></p>
+      <p><a href="#">내용3</a></p>
+    </div>
+
+    <h1>mouseleave</h1>
+    <div id="box_2">
+      <p><a href="#">내용4</a></p>
+      <p><a href="#">내용5</a></p>
+      <p><a href="#">내용6</a></p>
+    </div>
+
+    <h1>mousemove</h1>
+    <p>X : <span class="posX">0</span></p>
+    <p>Y : <span class="posY">0</span></p>
+  </body>
+</html>

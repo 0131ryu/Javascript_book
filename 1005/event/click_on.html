@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+    <script>
+      $(function () {
+        $(".btn1").click(function (e) {
+          e.preventDefault();
+          $(".btn1").parent().next().css({ color: "#f00" }); //btn1을 누르면 <p>내용1</p>의 글자가 f00으로 바뀜
+        });
+
+        $(".btn2").on({
+          "mouseover focus": function () {
+            $(".btn2").parent().next().css({ color: "#0f0" }); //btn2에 마우스 포인터를 올리거나 포커스 이동 시 <p>내용2</p>의 글자가 0f0으로 바뀜
+          },
+          "mouseout blur": function () {
+            $(".btn2").parent().next().css({ color: "#000" }); //btn2에서 다른 곳으로 마우스 포인터를 올리거나 포커스 이동 시 <p>내용2</p>의 글자가 0f0으로 바뀜
+          },
+        });
+
+        $(".btn3").on("dbclick", function () {
+          $(".txt3").css({ "background-color": "#0f0" });
+        });
+        /*강제로 이벤트 실행
+        $(".btn1").click();
+        $(".btn2").trigger("mouseover"); //btn2에 마우스 포인터를 올리면 이벤트 핸들러(function() {자바스크립트 코드})가 자동으로 실행됨
+        */
+
+        /*강제로 이벤트 종료
+        $(".btn1").off("click");
+        $(".btn2").off("mouseover focus");
+        */
+
+        /*ready : 사용자가 사이트 방문 시 요청한 HTML 문서 객체의 로딩이 끝나면 이벤트 발생
+        load : 외부에 연동된 소스의 로딩이 끝나면 이벤트 발생
+        $(document).ready(function () {
+          var h1 = $(".img1").height();
+          console.log("ready : ", h1);
+        });
+
+        $(window).load(function () {
+          var h2 = $(".img1").height();
+          console.log("load : ", h2);});*/
+
+        /*마우스 이벤트
+          click()/dbclick()*/
+
+        /*기본 이벤트 차단
+        1. e.preventDefault();
+        2. return false */
+        $(".btn4").on({
+          mouseover: function () {
+            //mouseover : 마우스 포인터를 올릴 때마다 이벤트를 발생기키거나 선택한 요소에 mouseover 이벤트 강제 발생
+            $(".txt4").css({ "background-color": "yellow" });
+          },
+          mousemout: function () {
+            //mouseout : 선택한 요소에서 마우스 포인터가 벗어날 때마다 이벤트를 발생시키거나 선택한 요소가 mouseout 이벤트 강제 발생
+            $(".txt4").css({ background: none });
+          },
+        });
+
+        $(".btn5").hover(
+          //hover : 선택한 요소에 마우스 포인터가 올라갈 때와 선택한 요송에서 벗어날 때 각각 이벤트 발생, 각각 다른 이벤트 핸들러 실행
+          function () {
+            $(".txt5").css({ "background-color": "aqua" });
+          },
+          function () {
+            $(".txt5").css({ background: "none" });
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+      <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+    <p>
+      <button class="btn3">버튼3</button>
+    </p>
+    <p>내용3</p>
+    <p>
+      <button class="btn4">버튼4</button>
+    </p>
+    <p class="txt4">내용4</p>
+    <p>
+      <button class="btn5">버튼5</button>
+    </p>
+    <p class="txt5">내용5</p>
+    <p>
+      <img src="http://place-hold.it/300X300" class="img1" />
+    </p>
+  </body>
+</html>
