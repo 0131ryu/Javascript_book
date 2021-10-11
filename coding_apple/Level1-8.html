@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="Level1-8.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!--모달창 위치-->
+    <div class="black-background" id="black-bg">
+      <div class="white-background">
+        <p>로그인 하세요</p>
+      </div>
+    </div>
+
+    <div class="nav-menu">
+      <h4 style="margin: 0">Shirt Studio</h4>
+      <a id="nav-sub-button">Products</a>
+    </div>
+
+    <ul class="list-group nav-sub">
+      <li class="list-group-item">Outer</li>
+      <li class="list-group-item">Innerwear</li>
+      <li class="list-group-item">Shirts</li>
+    </ul>
+
+    <div class="jumbotron main-background">
+      <h1 class="display-4">Shirt Studio</h1>
+      <p class="lead">
+        this afkjafjakfjlkafkafmkafklmakfmkamfkmalfmaksmfkma.lpqworqjtiqj
+      </p>
+      <hr class="my-4" />
+      <p>tjqkjlkklamkflakmfkamkmv,arpqtopq[roplt,l,;;;;qkrkqo</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button" id="login"
+        >Log in</a
+      >
+    </div>
+
+    <script>
+      $("#login").on("click", function () {
+        //$(".black-background").css('display') = 'block';
+        $(".black-background").show();
+      });
+
+      $("#nav-sub-button").click(function () {
+        //$(".black-background").css('display') = 'block';
+        $(".nav-sub").slideToggle();
+      });
+    </script>
+  </body>
+</html>
