@@ -10,10 +10,11 @@
   z-index: 5;
   width: 100%;
   height: 100%;
-  display: none;
-  margin-top: -1200px; /*시작화면*/
-  /*최종화면은 margin-top이 0px*/
-  /*visibility: hidden;*/
+  display: block;
+  transition: all 1s;
+}
+.slide-down {
+  transform: translateY(0px);
 }
 .white-background {
   background: white;
