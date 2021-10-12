@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery</title>
+    <link rel="stylesheet" href="Level1-6.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h4 id="test">안녕하세요</h4>
+    <div class="yellow-bg"></div>
+    <script>
+      //$("#test").html("안녕"); //모든 내용 바꿈
+      $("#test").text("안녕"); //안의 내용 바꿈
+      $(".yellow-bg").html("yellow");
+    </script>
+  </body>
+</html>
