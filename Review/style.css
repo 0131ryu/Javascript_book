@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*로그인 모달창 시작*/
+.login-background {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.login-item {
+  background: white;
+  width: 80%;
+  height: 50%;
+  position: relative;
+  margin: 120px;
+  margin-left: 150px;
+  padding: 20px;
+  border-radius: 10px;
+}
+#email {
+  margin-top: 30px;
+}
+#password {
+  margin-top: 30px;
+}
+#email-alert {
+  display: none;
+}
+#password-alert {
+  display: none;
+}
+.form-btn {
+  position: relative;
+  top: 50px;
+  left: 450px;
+}
+.login-btn {
+  background: #6f4237;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  color: white;
+  border: 0;
+  outline: 0;
+}
+.home-btn {
+  background: #3c2f2f;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  color: white;
+  border: 0;
+  outline: 0;
+}
+/*로그인 모달창 끝*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+#logo {
+  color: #6f4237;
+  font-weight: bold;
+}
+.menu-list {
+  display: none;
+  position: relative;
+  left: 1290px;
+}
+.menu-list-item {
+  list-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 200px;
+  height: 35px;
+  border: 1px solid #6f4237;
+}
+.menu-list-item:hover {
+  background: #6f4237;
+  color: white;
+  border: 0;
+  outline: 0;
+}
+.main-background {
+  background-image: url(coffee-shop.jpg);
+  background-size: cover;
+  height: 420px;
+  color: white;
+  font-weight: bold;
+  border-radius: 0;
+}
+.main-title {
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  top: 155px;
+}
+
+.content-background {
+  margin-top: 20px;
+  background: #d0bb94;
+  height: 250px;
+  display: flex;
+}
+.content-item {
+  flex: 1;
+  background: white;
+  width: auto;
+  height: 200px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+.content-item-title {
+  position: relative;
+  top: 80px;
+}
+.btn-login {
+  background: #6f4237;
+  color: white;
+  border: 0;
+  outline: 0;
+}
+.btn-login:hover {
+  background: #d0bb94;
+  color: black;
+  border: 0;
+  outline: 0;
+}
