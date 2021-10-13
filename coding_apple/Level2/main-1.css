@@ -47,3 +47,15 @@
 .slide-down {
   transform: translateY(0px);
 }
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-container {
+  width: 300vw;
+  /*왼쪽으로 이동시키는 css 속성*/
+  transition: transform 1s;
+}
+.slide-box img {
+  width: 100%;
+}
