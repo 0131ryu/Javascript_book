@@ -59,3 +59,14 @@
 .slide-box img {
   width: 100%;
 }
+.slide-next {
+  /*position: absolute를 쓰려면 부모 div에 position relative가 필요*/
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+.slide-before {
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
