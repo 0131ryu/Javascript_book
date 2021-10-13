@@ -12,9 +12,7 @@
   height: 100%;
   display: block;
   transition: all 1s;
-}
-.slide-down {
-  transform: translateY(0px);
+  transform: translateY(-1000px);
 }
 .white-background {
   background: white;
@@ -45,4 +43,7 @@
   color: white;
   position: fixed;
   margin-left: -150px;
+}
+.slide-down {
+  transform: translateY(0px);
 }

@@ -9,7 +9,10 @@ body {
   z-index: 5;
   width: 100%;
   height: 100%;
-  display: none;
+  display: block; /*transition이 제대로 보이게 하기 위함*/
+  /*jquery에 css 적용대신 css를 통한 애니메이션이 많이 사용*/
+  transition: all 1s;
+  transform: translateX(-1550px);
 }
 .login-item {
   background: white;
@@ -57,6 +60,7 @@ body {
   outline: 0;
 }
 /*로그인 모달창 끝*/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -135,4 +139,56 @@ body {
   color: black;
   border: 0;
   outline: 0;
+}
+/*왼쪽에서 메뉴 보기*/
+.left-bar {
+  width: 200px;
+  height: 100%;
+  background: #c45608;
+  color: black;
+  position: fixed;
+  margin-left: -200px;
+  z-index: 4;
+}
+.left-bar > p {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+#left-bar-button {
+  background: #d0bb94;
+  color: black;
+  border: 0;
+  outline: 0;
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+}
+#left-bar-button:hover {
+  background: #c45608;
+  color: black;
+  border: 0;
+  outline: 0;
+}
+#left-bar-close {
+  background: #d0bb94;
+  color: black;
+  border: 0;
+  outline: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  left: 60px;
+  top: 20px;
+}
+/*addClass 사용하기 위한 class 분리
+작동 안 될 경우 css 맨 아래로 옮길 것*/
+.login-slide {
+  transform: translateX(0px);
+}
+.left-bar-show {
+  margin-left: 0px;
+}
+.left-bar-closeBar {
+  margin-left: -200px;
 }

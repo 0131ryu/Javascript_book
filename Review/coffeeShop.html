@@ -63,10 +63,20 @@
       <li class="menu-list-item">기타음료</li>
     </ul>
 
+    <!--왼쪽에서 메뉴보기-->
+    <div class="left-bar">
+      <p>카페 소개</p>
+      <p>카페 메뉴</p>
+      <p>판매 상품</p>
+      <p>안내 페이지</p>
+      <button id="left-bar-close">닫기</button>
+    </div>
+
     <div class="main-background">
       <div class="main-title">
         <h1>MyCoffeShop</h1>
         <p>A place to truly relax and enjoy coffee</p>
+        <button id="left-bar-button">왼쪽에서 메뉴 보기</button>
       </div>
     </div>
 
@@ -88,9 +98,9 @@
       $(".menu-list").slideToggle();
     });
 
-    //로그인 버튼을 누르면 모달창 보이기
+    //addClass 사용해 Login 변경하기
     $("#login").click(function () {
-      $(".login-background").show();
+      $(".login-background").addClass("login-slide");
     });
 
     //폼 전송 시
@@ -111,6 +121,18 @@
     //모달 열 경우 홈 버튼 누르면 모달창 닫기
     $(".home-btn").click(function () {
       $(".login-background").hide();
+    });
+
+    //left-bar-button을 버튼을 누를 경우 왼쪽에 left-bar 보이게 함
+    $("#left-bar-button").click(function () {
+      //$(".left-bar").css("marginLeft", "0px");
+      $(".left-bar").addClass("left-bar-show");
+    });
+
+    //left-bar-close 버튼을 누를 경우 왼쪽에 left-bar 가림
+    $("#left-bar-close").click(function () {
+      //$(".left-bar").css("marginLeft", "-200px");
+      $(".left-bar").addClass("left-bar-closeBar");
     });
   </script>
 </html>

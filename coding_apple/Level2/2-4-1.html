@@ -28,7 +28,7 @@
     </div>
 
     <!--모달창 위치-->
-    <div class="black-background slide-down" id="black-bg">
+    <div class="black-background" id="black-bg">
       <div class="white-background">
         <p>로그인 하세요</p>
         <form action="login.php">
@@ -114,7 +114,8 @@
       });
 
       $("#login").on("click", function () {
-        $(".black-background").addClass(".slide-down");
+        // $(".black-background").css("transform", "translateY(0px)");
+        $(".black-background").addClass("slide-down");
       });
 
       $("#close").click(function () {
