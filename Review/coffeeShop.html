@@ -87,9 +87,31 @@
         </p>
       </div>
       <div class="content-item"><p class="content-item-title">Search</p></div>
-      <div class="content-item"><p class="content-item-title">New Item</p></div>
-      <div class="content-item"><p class="content-item-title">Other</p></div>
+      <div class="content-item"><p class="content-item-title">ImageSlide</p></div>
+        <div class="content-item"><p class="content-item-title">Other</p></div>
+      </div>
     </div>
+    <!--이미지 슬라이드-->
+
+    <div style="overflow: hidden; position: relative">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="img/coffee1.jpg" />
+        </div>
+        <div class="slide-box">
+          <img src="img/coffee2.jpg" />
+        </div>
+        <div class="slide-box">
+          <img src="img/coffee3.jpg" />
+        </div>
+      </div>
+      <button class="slide-before">Before</button>
+      <button class="slide-next">Next</button>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
   </body>
 
   <script>
@@ -133,6 +155,21 @@
     $("#left-bar-close").click(function () {
       //$(".left-bar").css("marginLeft", "-200px");
       $(".left-bar").addClass("left-bar-closeBar");
+    });
+
+    //슬라이드
+    $(".slide-1").click(function () {
+      $(".slide-container").css("transform", "translateX(0vw)");
+    });
+
+    //slide-2를 누르면 두 번째 사진
+    $(".slide-2").click(function () {
+      $(".slide-container").css("transform", "translateX(-20vw)");
+    });
+
+    //slie-3을 누르면 세 번째 사진
+    $(".slide-3").click(function () {
+      $(".slide-container").css("transform", "translateX(-40vw)");
     });
   </script>
 </html>

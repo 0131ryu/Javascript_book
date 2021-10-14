@@ -192,3 +192,27 @@ body {
 .left-bar-closeBar {
   margin-left: -200px;
 }
+/*슬라이드 */
+.slide-box {
+  width: 20vw;
+  float: left;
+}
+.slide-container {
+  width: 60vw;
+  /*왼쪽으로 이동시키는 css 속성*/
+  transition: transform 1s;
+}
+.slide-box img {
+  width: 100%;
+}
+.slide-next {
+  /*position: absolute를 쓰려면 부모 div에 position relative가 필요*/
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+.slide-before {
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
