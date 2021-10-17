@@ -1,0 +1,22 @@
+.slide-container {
+  width: 300vw;
+  transition: transform 1s;
+  /*transform: translateX(-0vw);*/
+}
+.slide-box {
+  width: 100vw;
+  float: left; /*왼쪽으로 정렬*/
+}
+.slide-box > img {
+  width: 100%;
+}
+.slide-right {
+  position: absolute; /*요소를 겹치거나 띄우려면 absolute*/
+  top: 45%;
+  right: 0;
+}
+.slide-left {
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
