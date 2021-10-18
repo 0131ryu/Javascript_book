@@ -192,27 +192,31 @@ body {
 .left-bar-closeBar {
   margin-left: -200px;
 }
-/*슬라이드 */
-.slide-box {
-  width: 20vw;
+/*이미지 슬라이드*/
+.imgContent {
+  width: 100vw;
   float: left;
 }
-.slide-container {
-  width: 60vw;
-  /*왼쪽으로 이동시키는 css 속성*/
+.imgSlide {
+  width: 500vw;
   transition: transform 1s;
+  /* transform: translateX(-100vw); */
 }
-.slide-box img {
+.imgContent > img {
   width: 100%;
 }
-.slide-next {
-  /*position: absolute를 쓰려면 부모 div에 position relative가 필요*/
-  position: absolute;
-  top: 45%;
+.imgRight {
+  position: absolute; /*요소를 겹치거나 띄우려면 absolute*/
+  top: 50%;
   right: 0;
 }
-.slide-before {
+.imgLeft {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 0;
+}
+.imgAllBtn {
+  position: absolute;
+  top: 90%;
+  left: 45%;
 }

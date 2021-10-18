@@ -93,27 +93,41 @@
         <div class="content-item"><p class="content-item-title">Other</p></div>
       </div>
     </div>
-    <!--이미지 슬라이드-->
+    <!--이미지 슬라이드 시작-->
 
-    <div style="overflow: hidden; position: relative">
-      <div class="slide-container">
-        <div class="slide-box">
-          <img src="img/coffee1.jpg" />
-        </div>
-        <div class="slide-box">
-          <img src="img/coffee2.jpg" />
-        </div>
-        <div class="slide-box">
-          <img src="img/coffee3.jpg" />
-        </div>
+    <div style="overflow: hidden; position: relative"> 
+      <!--화면에 1개씩 이미지 나오게 하기 위함-->
+    <div class="imgSlide">
+      <div class="imgContent">
+        <img src="img/coffee1.jpg">
       </div>
-      <button class="slide-before">Before</button>
-      <button class="slide-next">Next</button>
+      <div class="imgContent">
+        <img src="img/coffee2.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee3.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee4.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee5.jpg">
+      </div>
     </div>
+    <button class="imgRight">right</button>
+    <button class="imgLeft">left</button>
+    <div class="imgAllBtn">
+      <button class="imgBtn1">1</button>
+      <button class="imgBtn2">2</button>
+      <button class="imgBtn3">3</button>
+      <button class="imgBtn4">4</button>
+      <button class="imgBtn5">5</button>
+    </div>
+  </div>
 
-    <button class="slide-1">1</button>
-    <button class="slide-2">2</button>
-    <button class="slide-3">3</button>
+<br/>
+
+    <!--이미지 슬라이드 끝-->
   </body>
 
   <script>
@@ -160,18 +174,37 @@
     });
 
     //슬라이드
-    $(".slide-1").click(function () {
-      $(".slide-container").css("transform", "translateX(0vw)");
+    $(".imgBtn1").click(function() {
+      $(".imgSlide").css("transform", "translateX(-0vw)");
+    })
+    $(".imgBtn2").click(function() {
+      $(".imgSlide").css("transform", "translateX(-100vw)");
+    })
+    $(".imgBtn3").click(function() {
+      $(".imgSlide").css("transform", "translateX(-200vw)");
+    })
+    $(".imgBtn4").click(function() {
+      $(".imgSlide").css("transform", "translateX(-300vw)");
+    })
+    $(".imgBtn5").click(function() {
+      $(".imgSlide").css("transform", "translateX(-400vw)");
+    })
+
+    var currentImg = 1;
+
+    $(".imgRight").click(function() {
+      $(".imgSlide").css("transform", "translateX(-"+ currentImg +"00vw)");
+      if (currentImg < 4) {
+        currentImg = currentImg + 1;
+      }
     });
 
-    //slide-2를 누르면 두 번째 사진
-    $(".slide-2").click(function () {
-      $(".slide-container").css("transform", "translateX(-20vw)");
+    $(".imgLeft").click(function() {
+      $(".imgSlide").css("transform", "translateX(-"+ (currentImg -2) +"00vw)");
+      if (currentImg > 1) {
+        currentImg = currentImg - 1;
+      }
     });
 
-    //slie-3을 누르면 세 번째 사진
-    $(".slide-3").click(function () {
-      $(".slide-container").css("transform", "translateX(-40vw)");
-    });
   </script>
 </html>
