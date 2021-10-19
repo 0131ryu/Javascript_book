@@ -89,7 +89,20 @@
         </p>
       </div>
       <div class="content-item"><p class="content-item-title">Search</p></div>
-      <div class="content-item"><p class="content-item-title">ImageSlide</p></div>
+      <div class="content-item"><p class="content-item-title">ImageSlide</p>
+        <!--slider-->
+      <div class="slider">
+        <div class="img-box">
+          <img src="img/tea1.jpg" class="slider-img">
+                  <!--Next and Prev Buttons-->
+          <div class="slider-button">
+        <button class="btn" onclick="prev()">Prev</button>
+        <button class="btn" onclick="next()">Next</button>
+      </div>
+        </div>
+
+      </div>
+  </div>
         <div class="content-item"><p class="content-item-title">Other</p></div>
       </div>
     </div>
@@ -126,9 +139,9 @@
   </div>
 
 <br/>
+<!--이미지 슬라이드 끝-->
 
-    <!--이미지 슬라이드 끝-->
-  </body>
+</body>
 
   <script>
     //1. product 메뉴를 누르면 menu-list 보이기
@@ -205,6 +218,30 @@
         currentImg = currentImg - 1;
       }
     });
+
+    //slider
+    var slider_img = document.querySelector('.slider-img');
+    var imgaes = ['tea1.jpg', 'tea2.jpg', 'tea3.jpg'];
+
+    var i = 0; //Current Image Index
+
+    function prev() {
+      if(i <= 0) 
+      i = imgaes.length;
+      i--;
+      return setImg();
+    }
+
+    function next() {
+      if(i >= imgaes.length-1) 
+      i= -1;
+      i++;
+      return setImg();
+    }
+
+    function setImg() {
+      return slider_img.setAttribute('src', "img/" + imgaes[i]); 
+    }
 
   </script>
 </html>
