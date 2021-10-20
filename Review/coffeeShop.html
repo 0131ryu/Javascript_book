@@ -21,6 +21,7 @@
   </head>
   <body>
     <!--로그인 모달창 시작-->
+    <div style="overflow: hidden;">
     <div class="login-background" id="login-bg">
       <div class="login-item">
         <p>로그인</p>
@@ -50,6 +51,7 @@
         </form>
       </div>
     </div>
+  </div>
     <!--로그인 모달창 끝-->
 
     <div class="navbar">
@@ -87,10 +89,59 @@
         </p>
       </div>
       <div class="content-item"><p class="content-item-title">Search</p></div>
-      <div class="content-item"><p class="content-item-title">New Item</p></div>
-      <div class="content-item"><p class="content-item-title">Other</p></div>
+      <div class="content-item"><p class="content-item-title">ImageSlide</p>
+        <!--slider-->
+      <div class="slider">
+        <div class="img-box">
+          <img src="img/tea1.jpg" class="slider-img">
+                  <!--Next and Prev Buttons-->
+          <div class="slider-button">
+        <button class="btn" onclick="prev()">Prev</button>
+        <button class="btn" onclick="next()">Next</button>
+      </div>
+        </div>
+
+      </div>
+  </div>
+        <div class="content-item"><p class="content-item-title">Other</p></div>
+      </div>
     </div>
-  </body>
+    <!--이미지 슬라이드 시작-->
+
+    <div style="overflow: hidden; position: relative"> 
+      <!--화면에 1개씩 이미지 나오게 하기 위함-->
+    <div class="imgSlide">
+      <div class="imgContent">
+        <img src="img/coffee1.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee2.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee3.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee4.jpg">
+      </div>
+      <div class="imgContent">
+        <img src="img/coffee5.jpg">
+      </div>
+    </div>
+    <button class="imgRight">right</button>
+    <button class="imgLeft">left</button>
+    <div class="imgAllBtn">
+      <button class="imgBtn1">1</button>
+      <button class="imgBtn2">2</button>
+      <button class="imgBtn3">3</button>
+      <button class="imgBtn4">4</button>
+      <button class="imgBtn5">5</button>
+    </div>
+  </div>
+
+<br/>
+<!--이미지 슬라이드 끝-->
+
+</body>
 
   <script>
     //1. product 메뉴를 누르면 menu-list 보이기
@@ -134,5 +185,63 @@
       //$(".left-bar").css("marginLeft", "-200px");
       $(".left-bar").addClass("left-bar-closeBar");
     });
+
+    //슬라이드
+    $(".imgBtn1").click(function() {
+      $(".imgSlide").css("transform", "translateX(-0vw)");
+    })
+    $(".imgBtn2").click(function() {
+      $(".imgSlide").css("transform", "translateX(-100vw)");
+    })
+    $(".imgBtn3").click(function() {
+      $(".imgSlide").css("transform", "translateX(-200vw)");
+    })
+    $(".imgBtn4").click(function() {
+      $(".imgSlide").css("transform", "translateX(-300vw)");
+    })
+    $(".imgBtn5").click(function() {
+      $(".imgSlide").css("transform", "translateX(-400vw)");
+    })
+
+    var currentImg = 1;
+
+    $(".imgRight").click(function() {
+      $(".imgSlide").css("transform", "translateX(-"+ currentImg +"00vw)");
+      if (currentImg < 4) {
+        currentImg = currentImg + 1;
+      }
+    });
+
+    $(".imgLeft").click(function() {
+      $(".imgSlide").css("transform", "translateX(-"+ (currentImg -2) +"00vw)");
+      if (currentImg > 1) {
+        currentImg = currentImg - 1;
+      }
+    });
+
+    //slider
+    var slider_img = document.querySelector('.slider-img');
+    var imgaes = ['tea1.jpg', 'tea2.jpg', 'tea3.jpg'];
+
+    var i = 0; //Current Image Index
+
+    function prev() {
+      if(i <= 0) 
+      i = imgaes.length;
+      i--;
+      return setImg();
+    }
+
+    function next() {
+      if(i >= imgaes.length-1) 
+      i= -1;
+      i++;
+      return setImg();
+    }
+
+    function setImg() {
+      return slider_img.setAttribute('src', "img/" + imgaes[i]); 
+    }
+
   </script>
 </html>

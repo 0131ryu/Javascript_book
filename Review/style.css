@@ -192,3 +192,61 @@ body {
 .left-bar-closeBar {
   margin-left: -200px;
 }
+/*이미지 슬라이드*/
+.imgContent {
+  width: 100vw;
+  float: left;
+}
+.imgSlide {
+  width: 500vw;
+  transition: transform 1s;
+  /* transform: translateX(-100vw); */
+}
+.imgContent > img {
+  width: 100%;
+}
+.imgRight {
+  position: absolute; /*요소를 겹치거나 띄우려면 absolute*/
+  top: 50%;
+  right: 0;
+}
+.imgLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.imgAllBtn {
+  position: absolute;
+  top: 90%;
+  left: 45%;
+}
+/*slider*/
+.slider {
+  margin: 10px auto;
+  width: 80%;
+}
+.img-box {
+  position: relative;
+  bottom: 25px;
+}
+.img-box img {
+  width: 100%;
+}
+.slider-button {
+  position: absolute;
+  top: 75%;
+  left: 25%;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: #888;
+  padding: 5px;
+  font-size: 5px;
+  color: #ddd;
+  cursor: pointer;
+  margin: 1px auto;
+}
+.btn:hover {
+  background: #ddd;
+}
