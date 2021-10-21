@@ -94,3 +94,48 @@ function next() {
 function setImg() {
   return slider_img.setAttribute("src", "img/" + imgaes[i]);
 }
+
+//navbar 관련
+//스크롤바를 내리면 navbar가 투명 -> 흰색으로 변경, 로고 색 흰색 -> 브라운
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 100) {
+    $(".navbar").addClass("navbar-change");
+    $(".navbar-brand").addClass("navbar-brand-change");
+  }
+  //스크롤바를 올리면 처음 상태로 되돌리기
+  else {
+    $(".navbar").removeClass("navbar-change");
+    $(".navbar-brand").removeClass("navbar-brand-change");
+  }
+
+  //탭 관련
+  //버튼 0번째를 누르면 버튼 1, 버튼2에 붙은 주황색 제거(show-tab)
+  //버튼 0번째를 누르면 내용 1, 2에 붙은 주황색 제거(show-content)
+  //버튼 0이 주황색으로 표시
+  //내용 0이 보여야함
+
+  /*
+  $(".tab-btn")
+    .eq(0)
+    .click(function () {
+      $(".tab-btn").removeClass("show-tab");
+      $(".tab-content").removeClass("show-content");
+
+      $(".tab-btn").eq(0).addClass("show-tab");
+      $(".tab-content").eq(0).addClass("show-content");
+    });
+  */
+
+  //for를 사용한 방법
+  for (let i = 0; i < $(".tab-btn").length; i++) {
+    $(".tab-btn")
+      .eq(i)
+      .click(function () {
+        $(".tab-btn").removeClass("show-tab");
+        $(".tab-content").removeClass("show-content");
+
+        $(".tab-btn").eq(i).addClass("show-tab");
+        $(".tab-content").eq(i).addClass("show-content");
+      });
+  }
+});

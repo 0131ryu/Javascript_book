@@ -54,8 +54,9 @@
   </div>
     <!--로그인 모달창 끝-->
 
-    <div class="navbar">
-      <span class="navbar-brand mb-0 h1" id="logo">MyCoffeShop</span>
+    <!--navbar 시작(상단메뉴창)-->
+    <div class="navbar" style="position: fixed">
+      <h1 class="navbar-brand">MyCoffeShop</h1>
       <a id="nav-menu">Products</a>
     </div>
 
@@ -64,6 +65,7 @@
       <li class="menu-list-item">커피용품</li>
       <li class="menu-list-item">기타음료</li>
     </ul>
+    <!--navbar 끝(상단메뉴창)-->
 
     <!--왼쪽에서 메뉴보기-->
     <div class="left-bar">
@@ -106,7 +108,20 @@
         <div class="content-item"><p class="content-item-title">Other</p></div>
       </div>
     </div>
-    <!--이미지 슬라이드 시작-->
+    
+<br/>
+<!--탭 슬라이드 시작-->
+<div class="container mt-5">
+  <ul class="tab-list">
+    <li class="tab-btn">Products</li>
+    <li class="tab-btn show-tab">Information</li>
+    <li class="tab-btn">Shipping</li>
+    <li class="tab-btn">Others</li>
+  </ul>
+
+  <div class="tab-content">
+    <p>상품설명입니다. Product
+      <!--이미지 슬라이드 시작-->
 
     <div style="overflow: hidden; position: relative"> 
       <!--화면에 1개씩 이미지 나오게 하기 위함-->
@@ -137,10 +152,20 @@
       <button class="imgBtn5">5</button>
     </div>
   </div>
-
-<br/>
 <!--이미지 슬라이드 끝-->
-
+    </p>
+  </div>
+  <div class="tab-content show-content">
+    <p>상품정보입니다. Info</p>
+  </div>
+  <div class="tab-content">
+    <p>배송정보입니다. Shipping</p>
+  </div>
+  <div class="tab-content">
+    <p>문의사항입니다. Others</p>
+  </div>
+</div>
+<!--탭 슬라이드 끝-->
 </body>
 <script src="coffeeShop.js"></script>
 </html>
