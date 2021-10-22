@@ -207,8 +207,9 @@
           $(".nav-menu").addClass("nav-black");
         } else if ($(window).scrollTop() > 200) {
           $(".nav-menu").addClass("nav-black-small");
-        } else if ($(window).scrollTop() < 100) {
-          $(".nav-menu").addClass("");
+        } else {
+          $(".nav-menu").removeClass("nav-black");
+          $(".nav-menu h4").removeClass("small-logo");
         }
       });
     </script>

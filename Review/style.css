@@ -6,7 +6,7 @@ body {
 .login-background {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 5;
+  z-index: 1;
   width: 100%;
   height: 100%;
   display: block; /*transition이 제대로 보이게 하기 위함*/
@@ -60,14 +60,30 @@ body {
   outline: 0;
 }
 /*로그인 모달창 끝*/
-
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 15px;
   align-items: center;
+  background-color: #3c2f2f;
+  z-index: 2;
+  width: 100%;
+  height: 80px;
+  color: white;
+  transition: all 1s;
 }
-#logo {
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+/*navbar 변경된 화면*/
+.navbar-change {
+  background: white;
+  color: #3c2f2f;
+  height: 50px;
+  transition: all 1s; /*모든 css 변경 시 애니메이션 효과*/
+}
+.navbar-brand-change {
   color: #6f4237;
   font-weight: bold;
 }
@@ -148,7 +164,8 @@ body {
   color: black;
   position: fixed;
   margin-left: -200px;
-  z-index: 4;
+  z-index: 3;
+  transition: all 1s; /*모든 css 변경 시 애니메이션 효과*/
 }
 .left-bar > p {
   margin-left: 50px;
@@ -250,3 +267,42 @@ body {
 .btn:hover {
   background: #ddd;
 }
+/*탭 슬라이드 시작*/
+ul.tab-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+ul.tab-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.tab-btn {
+  display: block;
+  padding: 10px 20px 10px 20px;
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+.show-tab {
+  border-top: 2px solid #c45608;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid white;
+  border-left: 1px solid #ccc;
+  color: #c45608;
+  margin-top: -2px;
+}
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+.show-content {
+  display: block;
+}
+
+/*탭 슬라이드 끝*/
