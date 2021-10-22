@@ -8,6 +8,13 @@ $("#login").click(function () {
   $(".login-background").addClass("login-slide");
 });
 
+//로그인 배경(login-background)을 누를 경우 창이 닫힘
+$(".login-background").click(function (e) {
+  if (e.target == e.currentTarget) {
+    $(".login-background").hide();
+  }
+});
+
 //폼 전송 시
 //모달창에서 Login 누르면 이메일이 없을 경우 이메일 없다고 나옴
 
@@ -130,12 +137,17 @@ $(window).on("scroll", function () {
   for (let i = 0; i < $(".tab-btn").length; i++) {
     $(".tab-btn")
       .eq(i)
-      .click(function () {
-        $(".tab-btn").removeClass("show-tab");
-        $(".tab-content").removeClass("show-content");
-
-        $(".tab-btn").eq(i).addClass("show-tab");
-        $(".tab-content").eq(i).addClass("show-content");
+      .click(function (e) {
+        tabOpen(e.target.dataset.id);
       });
+  }
+
+  //탭 기능 반복되는 것 -> 함수로 축약
+  function tabOpen(openNum) {
+    $(".tab-btn").removeClass("show-tab");
+    $(".tab-content").removeClass("show-content");
+
+    $(".tab-btn").eq(openNum).addClass("show-tab");
+    $(".tab-content").eq(openNum).addClass("show-content");
   }
 });
