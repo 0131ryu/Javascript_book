@@ -151,3 +151,18 @@ $(window).on("scroll", function () {
     $(".tab-content").eq(openNum).addClass("show-content");
   }
 });
+
+//form
+$("#checkList1").on("change", function () {
+  //만약 사용자가 선택한 값이 커피 경우
+  if ($("#checkList1").val() == "커피") {
+    //밑의 UI를 보여줌
+    $(".c-select").show();
+    $(".menu-select").show();
+  }
+  //모자를 고르면 밑의 UI가 숨겨짐
+  else if ($("#checkList1").val() == "쉐이크") {
+    $(".c-select").hide();
+    $(".menu-select").hide();
+  }
+});
