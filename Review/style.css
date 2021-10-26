@@ -308,8 +308,8 @@ ul.tab-list::after {
 /*탭 슬라이드 끝*/
 /*form*/
 .c-select {
-  display: none;
+  display: block;
 }
 .menu-select {
-  display: none;
+  display: block;
 }
