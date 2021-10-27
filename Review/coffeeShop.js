@@ -179,4 +179,44 @@ $("#checkList1").on("change", function () {
   //   $(".c-select").css.display = "none";
   //   $(".menu-select").css.display = "none";
   // }
+
+  //sort, filter
+  var coffeeItems = [
+    { id: 0, ItemPrice: 15000, tiItemNametle: "Brazil dark coffee" },
+    { id: 1, ItemPrice: 30000, ItemName: "Ethiopia medium coffee" },
+    { id: 2, ItemPrice: 25000, ItemName: "Columbia non-caffeine coffee" },
+    { id: 3, ItemPrice: 20000, ItemName: "Vietnam non-caffeine coffee" },
+    { id: 4, ItemPrice: 15000, ItemName: "Indonesia dark coffee" },
+  ];
+
+  //데이터바인딩
+  function coffeeData() {
+    for (var i = 0; i < 5; i++) {
+      $(".ItemName").eq(i).html(coffeeItems[i].ItemName);
+      $(".ItemPrice").eq(i).html(coffeeItems[i].ItemPrice);
+    }
+  }
+
+  //sort를 이용해 가격 정렬
+  $("#sortPrice").click(function () {
+    coffeeItems.sort(function (a, b) {
+      return a.ItemPrice - b.ItemPrice;
+    });
+    //sort를 통해 데이터 정렬 후 데이터바인딩
+    coffeeData();
+  });
+
+  //sort로 가나다순 정렬
+  $("#sortEng").click(function () {
+    coffeeItems.sort(function (a, b) {
+      if (a.ItemName < b.ItemName == true) {
+        //글자 비교(부등호), +를 return 하면 b를 왼쪽, -는 b를 오른쪽
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+    //sort를 통해 데이터 정렬 후 데이버바인딩
+    coffeeData();
+  });
 });
