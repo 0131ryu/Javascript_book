@@ -37,6 +37,7 @@
       </div>
     </div>
     <button class="btn btn-danger" id="changeBtn">버튼</button>
+    <button class="btn btn-primary" id="test">테스트 버튼</button>
     <script>
       //버튼을 누르면 url로 ajax 요청을 해서 받아온 글자로 바꾸기
       $("#changeBtn").click(function () {
@@ -48,6 +49,17 @@
           $(".card-title").html(데이터.model);
           $(".card-text").html(데이터.price);
           $(".card-img-top").attr("src", 데이터.img);
+        });
+      });
+
+      //json 테스트
+      $("#test").click(function () {
+        $.ajax({
+          url: "https://raw.githubusercontent.com/0131ryu/Javascript_book/b7aa12f3da6a928d81bc800cca595677128e8ebd/origin.json",
+          type: "GET",
+        }).done(function (데이터) {
+          console.log(데이터);
+          $(".card-title").html(데이터.name);
         });
       });
     </script>
