@@ -179,4 +179,6 @@ $("#checkList1").on("change", function () {
   //   $(".c-select").css.display = "none";
   //   $(".menu-select").css.display = "none";
   // }
+
+  //ajax 값이 먹히지 않음
 });

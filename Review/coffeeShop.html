@@ -256,6 +256,8 @@
   <div class="card2">
     </div>
 </div>
+
+<button class="btn btn-warning" id="test">json테스트</button>
 <script>
    //sort, filter
    var coffeeItems = [
@@ -341,6 +343,17 @@
         //sort를 통해 데이터 정렬 후 데이터바인딩
         coffeeData();
       });
+
+      
+  //json 테스트
+  $("#test").click(function () {
+    $.ajax({
+      url: "https://raw.githubusercontent.com/0131ryu/Javascript_book/b7aa12f3da6a928d81bc800cca595677128e8ebd/origin.json",
+      type: "GET",
+    }).done(function (데이터) {
+      console.log(데이터);
+    });
+  });
 </script>
 </body>
 <script src="coffeeShop.js"></script>
