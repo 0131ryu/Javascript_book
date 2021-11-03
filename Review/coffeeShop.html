@@ -348,6 +348,14 @@
   //json 테스트
   $("#test").click(function () {
     $.ajax({
+      url: "https://codingapple1.github.io/data.json",
+      type: "GET",
+    }).done(function (데이터) {
+      console.log(데이터.model);
+    });
+  });
+  $("#test").click(function () {
+    $.ajax({
       url: "https://raw.githubusercontent.com/0131ryu/Javascript_book/b7aa12f3da6a928d81bc800cca595677128e8ebd/origin.json",
       type: "GET",
     }).done(function (데이터) {
