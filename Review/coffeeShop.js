@@ -151,3 +151,34 @@ $(window).on("scroll", function () {
     $(".tab-content").eq(openNum).addClass("show-content");
   }
 });
+
+//form
+var cafeMenu = ["커피", "스파클링", "쉐이크", "티(tea)"];
+var temp = ["뜨거움", "차가움"];
+var coffeeMenu = ["아메리카노", "라떼", "아인슈페너"];
+
+$("#checkList1").on("change", function () {
+  //만약 사용자가 선택한 값이 커피 경우
+  if ($("#checkList1").val() == cafeMenu[3]) {
+    //밑의 UI를 보여줌
+    temp.forEach(function (i) {
+      var tempShow = `<option>${i}</option>`;
+      $("#checkList2").append(tempShow);
+    });
+  } else if ($("#checkList1").val() == cafeMenu[0]) {
+    temp.forEach(function (i) {
+      var tempShow = `<option>${i}</option>`;
+      $("#checkList2").append(tempShow);
+    });
+    coffeeMenu.forEach(function (i) {
+      var coffeeShow = `<option>${i}</option>`;
+      $("#checkList3").append(coffeeShow);
+    });
+  }
+  // else if ($("#checkList1").val() == "쉐이크") {
+  //   $(".c-select").css.display = "none";
+  //   $(".menu-select").css.display = "none";
+  // }
+
+  
+});

@@ -52,8 +52,6 @@
       </div>
     </div>
 
-    <div class="card-group2 container"></div>
-
     <!--상품정렬-->
     <div class="container my-4">
       <button class="btn btn-primary" id="sortEng">가나다순정렬</button>
@@ -62,6 +60,8 @@
       <button class="btn btn-success" id="filterPrice">6만원이하</button>
       <button class="btn btn-warning" id="currentSort">되돌리기</button>
     </div>
+
+    <div class="card-group2 container"></div>
     <script>
       var products = [
         //array 안에 object가 3개 들어감
@@ -133,9 +133,10 @@
           return a.price <= 60000;
         });
 
+        console.log(새상품);
+
         새상품.forEach(function (a) {
-          var template = `
-            <div class="card">
+          var template = `<div class="card">
         <img src="https://via.placeholder.com/600" />
         <div class="card-body">
           <h5 class="title">${a.title}</h5>

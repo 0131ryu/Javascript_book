@@ -1,0 +1,37 @@
+.title {
+  margin: 100px;
+}
+.title h2 {
+  color: white;
+  position: relative;
+  top: 300px;
+}
+.titleImage {
+  float: right;
+  width: 400px;
+  position: sticky; /*조건부로 fixed*/
+  top: 100px;
+  margin: 100px;
+}
+.titleImage img {
+  width: 500px;
+  height: 300px;
+}
+.white {
+  background: transparent;
+  height: 2000px;
+  margin-top: 500px;
+}
+.image {
+  float: right;
+  width: 400px;
+  position: sticky; /*조건부로 fixed*/
+  top: 100px;
+  margin: 100px;
+}
+.text {
+  float: left;
+  width: 300px;
+  margin: 50px;
+  color: white;
+}
