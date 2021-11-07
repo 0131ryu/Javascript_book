@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+    <link href="style3.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="cardBg">
+      <div class="cardBox">
+        <img src="img/cafe1.jpg" />
+      </div>
+      <div class="cardBox">
+        <img src="img/cafe2.jpg"/>
+      </div>
+      <div class="cardBox">
+        <img src="img/cafe3.jpg" />
+      </div>
+      <div class="cardBox">
+        <img src="img/cafe4.jpg" />
+      </div>
+
+      <script>
+      $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        console.log(height);
+
+        //0~726까지 스크롤바를 내리면
+        //첫째 카드의 opacity 1~0으로 서서히 변경
+        var y1 = (-1 / 500) * height + 726 / 500;
+        var z1 = (-1 / 5500) * height + 565 / 550;
+
+        $(".cardBox").eq(0).css("opacity", y1);
+        $(".cardBox").eq(0).css("transform", `scale(${z1})`);
+
+        //744~1650
+        var y2 = (-1 / 500) * height + 1650 / 500;
+        var z2 = (-1 / 5500) * height + 625 / 550;
+
+        $(".cardBox").eq(1).css("opacity", y2);
+        $(".cardBox").eq(1).css("transform", `scale(${z2})`);
+      
+
+        //1800 ~ 2525
+        var y3 = (-1 / 500) * height + 2525 / 500;
+        var z3 = (-1 / 5500) * height + 685 / 550;
+
+        $(".cardBox").eq(2).css("opacity", y3);
+        $(".cardBox").eq(2).css("transform", `scale(${z3})`);
+      
+
+        //2231 ~ 3200
+        var y4 = (-1 / 500) * height + 3200 / 500;
+        var z4 = (-1 / 5500) * height + 745 / 550;
+
+        $(".cardBox").eq(3).css("opacity", y4);
+        $(".cardBox").eq(3).css("transform", `scale(${z4})`);
+        
+      });
+    </script>
+  </body>
+</html>
