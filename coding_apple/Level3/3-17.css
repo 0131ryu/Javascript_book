@@ -1,0 +1,16 @@
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-container {
+  width: 300vw;
+  /*왼쪽으로 이동시키는 css 속성*/
+  /* transition: transform 0.5s; */
+}
+.transforming {
+  /*항상 적용되지 않았으면 해서 분리함*/
+  transition: transform 0.5s;
+}
+.slide-box img {
+  width: 100%;
+}
