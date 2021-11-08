@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="cardBg">
-      <h3 class="BoxTitle">This is scroll img Box</h3>
+      <h3 class="BoxTitle1">This is scroll img Box</h3>
       <div class="cardBox">
         <img src="img/cafe1.jpg" />
       </div>
@@ -37,7 +37,10 @@
       </div>
 
       <h1 class="slideFont" style="visibility: hidden;">12345</h1>
-      <h3 class="BoxTitle">This is Slide-Touch</h3>
+      <div>
+        <button>글자가 나오는 버튼</button>
+        <h3 class="BoxTitle2">This is Slide-Touch</h3>
+      </div>
       <div style="overflow: hidden; position: relative">
         <div class="sliders">
           <div class="slideBox">
@@ -118,8 +121,21 @@
               $(".sliders").removeClass("changeSecond");
             }, 10000);
           }
-          }
+        }
+        })
 
+        //누르면 천천히 글자가 나옴
+        //0.5초에 h1를 빈칸으로 만듦 -> 슬라이더를 -> 변경하자!로 바뀜
+        var h1Tag = document.querySelector(".BoxTitle2");
+        var font = document.querySelector(".BoxTitle2").innerHTML;
+
+        $("button").click(function() {
+          h1Tag.innerHTML = "";
+          for(let i=0; i<font.length; i++) {
+            setTimeout(function() {
+              h1Tag.innerHTML = h1Tag.innerHTML + font[i];
+            }, i*500);
+          }
         })
       });
     </script>

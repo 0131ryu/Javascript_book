@@ -2,7 +2,11 @@
   width: 80%;
   height: 80%;
 }
-.BoxTitle {
+.BoxTitle1 {
+  font-size: 30px;
+  text-align: center;
+}
+.BoxTitle2 {
   font-size: 30px;
   text-align: center;
 }
