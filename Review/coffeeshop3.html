@@ -10,10 +10,19 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"
   ></script>
+  
+    <!--터치 이벤트-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88="
+      crossorigin="anonymous"
+    ></script>
+
     <link href="style3.css" rel="stylesheet" />
   </head>
   <body>
     <div class="cardBg">
+      <h3 class="BoxTitle">This is scroll img Box</h3>
       <div class="cardBox">
         <img src="img/cafe1.jpg" />
       </div>
@@ -27,10 +36,31 @@
         <img src="img/cafe4.jpg" />
       </div>
 
+      <h1 class="slideFont" style="visibility: hidden;">12345</h1>
+      <h3 class="BoxTitle">This is Slide-Touch</h3>
+      <div style="overflow: hidden; position: relative">
+        <div class="sliders">
+          <div class="slideBox">
+            <img src="img/people1.jpg">
+          </div>
+          <div class="slideBox">
+            <img src="img/people2.jpg">
+          </div>
+          <div class="slideBox">
+            <img src="img/people3.jpg">
+          </div>
+          <div class="slideBox">
+            <img src="img/people4.jpg">
+          </div>
+          <div class="slideBox">
+            <img src="img/people5.jpg">
+          </div>
+        </div>
+      </div>
       <script>
       $(window).scroll(function () {
         var height = $(window).scrollTop();
-        console.log(height);
+        //console.log(height);
 
         //0~726까지 스크롤바를 내리면
         //첫째 카드의 opacity 1~0으로 서서히 변경
@@ -63,6 +93,34 @@
         $(".cardBox").eq(3).css("opacity", y4);
         $(".cardBox").eq(3).css("transform", `scale(${z4})`);
         
+
+        //슬라이드 터치 기능 -> 반복문 사용 시 오류남
+        // var fontCount = document.querySelector("h1").innerHTML;
+
+        // for(let i=0; i<fontCount.length; i++) {
+        //   var img1 = document.querySelectorAll(".slideBox img")[i];
+        // }
+
+        var img1 = document.querySelectorAll(".slideBox img")[0];
+        var manager = new Hammer.Manager(img1);
+        manager.add(new Hammer.Pan({threshold: 100}));
+
+        var showImg = 1;
+        manager.on("pan", function(e) {
+          console.log(e.deltaX);
+          //왼쪽으로 이동 시 - 100 오른쪽은 +100
+          if(e.deltaX < -1) {
+            $(".sliders").css("transform", "translateX(" + e.deltaX*10 + "px)");
+          if(e.isFinal && showImg == 1) {
+            $(".sliders").addClass("changeSecond");
+            $(".sliders").css("transform", "translateX(-100vw)");
+            setTimeout(function() {
+              $(".sliders").removeClass("changeSecond");
+            }, 10000);
+          }
+          }
+
+        })
       });
     </script>
   </body>

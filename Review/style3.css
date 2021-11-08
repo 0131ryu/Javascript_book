@@ -2,3 +2,22 @@
   width: 80%;
   height: 80%;
 }
+.BoxTitle {
+  font-size: 30px;
+  text-align: center;
+}
+.slideBox {
+  width: 100vw;
+  float: left;
+  position: relative;
+  left: 3.5%;
+}
+.sliders {
+  width: 500vw;
+}
+.slideBox img {
+  width: 60%;
+}
+.changeSecond {
+  transition: transform 0.5s;
+}
