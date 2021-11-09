@@ -3,8 +3,20 @@ $("#nav-menu-coffee").click(function () {
   $(".menu-list-coffee").slideToggle();
 });
 
-//addClass 사용해 Login 변경하기
-$("#login").click(function () {
+$("#nav-menu-menu").click(function () {
+  $(".menu-list-menu").slideToggle();
+});
+
+$("#nav-menu-store").click(function () {
+  $(".menu-list-store").slideToggle();
+});
+
+$("#nav-menu-new").click(function () {
+  $(".menu-list-new").slideToggle();
+});
+
+//sign in 클릭 시 로그인 화면 나오기
+$("#nav-menu-login").click(function () {
   $(".login-background").addClass("login-slide");
 });
 

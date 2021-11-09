@@ -23,8 +23,9 @@
   ></script>
   </head>
   <body>
+
     <!--로그인 모달창 시작-->
-    <div style="overflow: hidden;">
+    <div style="overflow: hidden;" style="position: relative">
     <div class="login-background" id="login-bg">
       <div class="login-item">
         <p>로그인</p>
@@ -47,7 +48,7 @@
             />
             <p id="password-alert">비밀번호를 입력하지 않았습니다.</p>
           </div>
-          <div class="form-btn">
+          <div class="form-btn" style="position:relative">
             <button class="login-btn">Login</button>
             <button class="home-btn">Home</button>
           </div>
@@ -61,10 +62,10 @@
   
     <div class="navbar-All" style="position: fixed">
       <div class="navbar-front-menu">
-        <a id="nav-menu">Sign In</a>
-      <a id="nav-menu">MyCoffeeShop</a>
-      <a id="nav-menu">고객 서비스</a>
-      <a id="nav-menu">매장 찾기</a>
+        <a id="nav-menu-login">Sign In</a>
+      <a id="nav-menu-home">MyCoffeeShop</a>
+      <a id="nav-menu-customer">고객 서비스</a>
+      <a id="nav-menu-searchStore">매장 찾기</a>
       <a id="nav-menu"><i class="fa-solid fa-magnifying-glass"></i></a>
       </div>
       <div class="navbar-back-brand">
@@ -72,17 +73,15 @@
     </div>
     <div  class="navbar-back-menu">
       <a id="nav-menu-coffee">Coffee</a>
-      <a id="nav-menu">Menu</a>
-      <a id="nav-menu">Store</a>
-      <a id="nav-menu">Introduce</a>
-      <a id="nav-menu">Magazine</a>
-      <a id="nav-menu">New goods</a>
+      <a id="nav-menu-menu">Menu</a>
+      <a id="nav-menu-store">Store</a>
+      <a id="nav-menu-new">New goods</a>
     </div>
     </div>
 
 
   <!--navbar 목록 나오기 시작-->
- <ul class="menu-list-coffee">
+ <ul class="menu-list-coffee" style="display: none;">
       <li class="menu-list-item">나와 어울리는 커피</li>
       <li class="menu-list-item">커피 음료</li>
       <ul class="menu-sub-list">
@@ -97,6 +96,52 @@
         <li class="menu-list-item-list">커피메이커</li>
         <li class="menu-list-item-list">커피프레스</li>
       </ul> 
+    </ul>
+
+    <ul class="menu-list-menu" style="display: none;">
+      <li class="menu-list-item">음료</li>
+      <ul class="menu-sub-list-f">
+        <li class="menu-list-item-list">콜드브루</li>
+        <li class="menu-list-item-list">브루드커피</li>
+        <li class="menu-list-item-list">에스프레소</li>
+        <li class="menu-list-item-list">프라푸치노</li>
+        <li class="menu-list-item-list">블렌디드</li>
+        <li class="menu-list-item-list">티</li>
+      </ul> 
+      <li class="menu-list-item">푸드</li>
+      <ul class="menu-sub-list-f">
+        <li class="menu-list-item-list">브레드</li>
+        <li class="menu-list-item-list">케이크</li>
+        <li class="menu-list-item-list">샌드위치</li>
+        <li class="menu-list-item-list">샐러드</li>
+      </ul> 
+      <li class="menu-list-item">상품</li>
+      <ul class="menu-sub-list-f">
+        <li class="menu-list-item-list">머그</li>
+        <li class="menu-list-item-list">유리잔</li>
+        <li class="menu-list-item-list">플라스틱 텀블러</li>
+        <li class="menu-list-item-list">스텐 텀블러</li>
+        <li class="menu-list-item-list">보온병</li>
+        <li class="menu-list-item-list">커피용품</li>
+      </ul> 
+    </ul>
+
+    <ul class="menu-list-store" style="display: none;">
+      <li class="menu-list-item-s">매장찾기</li>
+      <ul class="menu-sub-list-s">
+        <li class="menu-list-item-list">검색하기</li>
+      </ul> 
+      <li class="menu-list-item-s">온라인 매장</li>
+      <li class="menu-list-item-s">매장의 역사</li>
+    </ul>
+
+    <ul class="menu-list-new" style="display: none;">
+      <li class="menu-list-item-n">신메뉴</li>
+      <ul class="menu-sub-list-n">
+        <li class="menu-list-item-list">이번 달 주목</li>
+      </ul> 
+      <li class="menu-list-item-n">새상품</li>
+      <li class="menu-list-item-n">기타안내</li>
     </ul>
 <!--navbar 목록 나오기 끝-->
 

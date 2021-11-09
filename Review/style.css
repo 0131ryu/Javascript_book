@@ -6,21 +6,23 @@ body {
 .login-background {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 1;
+  top: 0%;
+  left: 0%;
+  z-index: 9;
   width: 100%;
   height: 100%;
   display: block; /*transition이 제대로 보이게 하기 위함*/
   /*jquery에 css 적용대신 css를 통한 애니메이션이 많이 사용*/
   transition: all 1s;
-  transform: translateX(-1550px);
+  transform: translateY(-1650px);
 }
 .login-item {
   background: white;
-  width: 80%;
+  width: 70%;
   height: 50%;
   position: relative;
   margin: 120px;
-  margin-left: 150px;
+  margin-left: 120px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -36,25 +38,26 @@ body {
 #password-alert {
   display: none;
 }
-.form-btn {
-  position: relative;
-  top: 50px;
-  left: 450px;
-}
 .login-btn {
+  position: absolute;
+  top: 50px;
+  left: 120px;
   background: #6f4237;
   border-radius: 10px;
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 35px;
   color: white;
   border: 0;
   outline: 0;
 }
 .home-btn {
+  position: absolute;
+  top: 50px;
+  left: 270px;
   background: #3c2f2f;
   border-radius: 10px;
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 35px;
   color: white;
   border: 0;
   outline: 0;
@@ -87,9 +90,13 @@ body {
   font-weight: bold;
   font-size: 35px;
 }
+.navbar-back-menu {
+  position: relative;
+  right: 50px;
+}
 .navbar-back-menu a {
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
   cursor: pointer;
 }
 #nav-menu-coffee:hover {
@@ -98,9 +105,9 @@ body {
   height: 100px;
 }
 
-/*navbar 목록 나오기*/
+/*navbar 목록 나오기 시작*/
+/*coffee*/
 .menu-list-coffee {
-  display: none;
   position: relative;
   top: 100px;
   display: flex;
@@ -112,6 +119,7 @@ body {
 }
 .menu-list-coffee li {
   list-style: none;
+  cursor: pointer;
 }
 .menu-list-item {
   font-weight: bold;
@@ -124,8 +132,102 @@ body {
 }
 .menu-sub-list li {
   margin: 30px;
+  cursor: pointer;
 }
-/*navbar 목록 나오기*/
+/*menu*/
+.menu-list-menu {
+  display: none;
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  background: #3c2f2f;
+  color: white;
+  height: 450px;
+  z-index: 2;
+}
+.menu-list-menu li {
+  list-style: none;
+  cursor: pointer;
+}
+.menu-list-item {
+  font-weight: bold;
+  margin: 50px;
+}
+.menu-sub-list-f {
+  position: relative;
+  top: 85px;
+  right: 150px;
+}
+.menu-sub-list-f li {
+  margin: 30px;
+  cursor: pointer;
+}
+/*store*/
+.menu-list-store {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  background: #3c2f2f;
+  color: white;
+  height: 200px;
+  z-index: 2;
+}
+.menu-list-store li {
+  list-style: none;
+  cursor: pointer;
+}
+.menu-list-item-s {
+  font-weight: bold;
+  position: relative;
+  right: 100px;
+  margin: 50px;
+  margin-left: 100px;
+}
+.menu-sub-list-s {
+  position: relative;
+  top: 85px;
+  right: 245px;
+}
+.menu-sub-list li {
+  margin: 30px;
+  cursor: pointer;
+}
+/*store*/
+/*New goods*/
+.menu-list-new {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  background: #3c2f2f;
+  color: white;
+  height: 200px;
+  z-index: 2;
+}
+.menu-list-new li {
+  list-style: none;
+  cursor: pointer;
+}
+.menu-list-item-n {
+  font-weight: bold;
+  position: relative;
+  right: 100px;
+  margin: 50px;
+  margin-left: 100px;
+}
+.menu-sub-list-n {
+  position: relative;
+  top: 85px;
+  right: 245px;
+}
+.menu-sub-list li {
+  margin: 30px;
+  cursor: pointer;
+}
+/*New goods*/
+/*navbar 목록 나오기 끝*/
 .main-background {
   background-image: white;
   background-size: cover;
