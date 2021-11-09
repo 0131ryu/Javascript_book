@@ -14,6 +14,8 @@
       crossorigin="anonymous"
     />
 
+    <!--fontawesome-->
+    <link href="asset/css/all.css" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -56,17 +58,50 @@
     <!--로그인 모달창 끝-->
 
     <!--navbar 시작(상단메뉴창)-->
-    <div class="navbar" style="position: fixed">
+  
+    <div class="navbar-All" style="position: fixed">
+      <div class="navbar-front-menu">
+        <a id="nav-menu">Sign In</a>
+      <a id="nav-menu">MyCoffeeShop</a>
+      <a id="nav-menu">고객 서비스</a>
+      <a id="nav-menu">매장 찾기</a>
+      <a id="nav-menu"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+      <div class="navbar-back-brand">
       <h1 class="navbar-brand">MyCoffeShop</h1>
-      <a id="nav-menu">Products</a>
+    </div>
+    <div  class="navbar-back-menu">
+      <a id="nav-menu-coffee">Coffee</a>
+      <a id="nav-menu">Menu</a>
+      <a id="nav-menu">Store</a>
+      <a id="nav-menu">Introduce</a>
+      <a id="nav-menu">Magazine</a>
+      <a id="nav-menu">New goods</a>
+    </div>
     </div>
 
-    <ul class="menu-list">
-      <li class="menu-list-item">원두</li>
+
+  <!--navbar 목록 나오기 시작-->
+ <ul class="menu-list-coffee">
+      <li class="menu-list-item">나와 어울리는 커피</li>
+      <li class="menu-list-item">커피 음료</li>
+      <ul class="menu-sub-list">
+        <li class="menu-list-item-list">아메리카노</li>
+        <li class="menu-list-item-list">마끼아또</li>
+        <li class="menu-list-item-list">카푸치노</li>
+        <li class="menu-list-item-list">라떼</li>
+        <li class="menu-list-item-list">모카</li>
+      </ul> 
       <li class="menu-list-item">커피용품</li>
-      <li class="menu-list-item">기타음료</li>
+      <ul class="menu-sub-list">
+        <li class="menu-list-item-list">커피메이커</li>
+        <li class="menu-list-item-list">커피프레스</li>
+      </ul> 
     </ul>
-    <!--navbar 끝(상단메뉴창)-->
+<!--navbar 목록 나오기 끝-->
+
+ <!--navbar 끝(상단메뉴창)-->
+
 
     <!--왼쪽에서 메뉴보기-->
     <div class="left-bar">
@@ -79,7 +114,7 @@
 
     <div class="main-background">
       <div class="main-title">
-        <h1>MyCoffeShop</h1>
+        <h1>MyCoffeeShop</h1>
         <p>A place to truly relax and enjoy coffee</p>
         <button id="left-bar-button">왼쪽에서 메뉴 보기</button>
       </div>

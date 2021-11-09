@@ -1,6 +1,6 @@
-//1. product 메뉴를 누르면 menu-list 보이기
-$("#nav-menu").click(function () {
-  $(".menu-list").slideToggle();
+//navbar-All 내 a항목을 누르면 하위 목록들이 보이기
+$("#nav-menu-coffee").click(function () {
+  $(".menu-list-coffee").slideToggle();
 });
 
 //addClass 사용해 Login 변경하기
@@ -179,6 +179,4 @@ $("#checkList1").on("change", function () {
   //   $(".c-select").css.display = "none";
   //   $(".menu-select").css.display = "none";
   // }
-
-  
 });
