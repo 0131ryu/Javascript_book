@@ -27,6 +27,18 @@ $(".login-background").click(function (e) {
   }
 });
 
+//화면 페이지 새로고침 시 글자와 이미지가 사라졌다가 보임
+//fadeIn 사용하기(opacity -> fadeIn)
+$(document).ready(function () {
+  //글자 보이게 하기
+  $(".main-title-h1").fadeIn(2000);
+  $(".main-title-p").fadeIn(2000);
+  //그림 순서대로 1 2 3보이게 하기
+  for (let i = 1; i < 4; i++) {
+    $(".main-img-num" + i).fadeIn(1000 * i);
+  }
+});
+
 //폼 전송 시
 //모달창에서 Login 누르면 이메일이 없을 경우 이메일 없다고 나옴
 

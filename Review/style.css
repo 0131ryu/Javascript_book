@@ -228,6 +228,7 @@ body {
 }
 /*New goods*/
 /*navbar 목록 나오기 끝*/
+/*메인 이미지 시작*/
 .main-background {
   background-image: white;
   background-size: cover;
@@ -235,14 +236,75 @@ body {
   color: black;
   font-weight: bold;
   border-radius: 0;
+  position: relative;
 }
 .main-title {
   padding: 30px;
   text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.main-img img {
   position: relative;
+  transition: all 0.5;
+  display: none;
+}
+.main-img-num1 {
+  position: absolute;
+  left: 40%;
+  width: 350px;
+  height: 250px;
+  top: 135px;
+}
+.main-img-num2 {
+  position: absolute;
+  left: 32%;
+  width: 280px;
+  height: 280px;
   top: 155px;
 }
-
+.main-img-num3 {
+  position: absolute;
+  left: 30%;
+  width: 260px;
+  height: 350px;
+  top: 85px;
+}
+/*메인 이미지 끝*/
+/*회원가입 창 시작*/
+.membership {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.membership-title {
+  position: relative;
+  bottom: 200px;
+  background: #808588;
+}
+.membership-title p {
+  margin: 20px;
+  padding: 0;
+  position: relative;
+  right: 120px;
+}
+.membership-title button {
+  float: right;
+  position: relative;
+  bottom: 80px;
+  right: 400px;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+  border-radius: 5px;
+  width: 92px;
+  height: 38px;
+}
+.membership-signIn {
+  background: #c5c6d0;
+}
+/*회원가입 창 끝*/
 .content-background {
   margin-top: 20px;
   background: #d0bb94;
