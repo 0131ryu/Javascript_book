@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    var JSONobject = { ID: "test", name: "홍길동" };
+
+    // get 방식 url 가져온다.
+    function generateGetUrl(serviceCode, params) {
+      var url = new String("");
+      var amp = new String("&");
+      var doubleDash = new String("=");
+
+      $.each(params, function (key, value) {
+        url +=
+          "http://www.naver.com?id=" +
+          serviceCode +
+          amp +
+          key +
+          doubleDash +
+          value;
+      });
+
+      return url;
+    }
+  </script>
+
+  <script>
+    var url = generateGetUrl("id001", params);
+  </script>
+  <body></body>
+</html>
