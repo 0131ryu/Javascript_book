@@ -204,10 +204,3 @@ $("#checkList1").on("change", function () {
   //   $(".menu-select").css.display = "none";
   // }
 });
-
-//JSON 파일 열기
-import data from "./address.json";
-
-console.log(data);
-
-let dataArr = data; // 이렇게 변수에 담을 수도 있음
