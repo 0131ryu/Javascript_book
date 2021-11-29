@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">Zero Cookie</div>
+
+    <script>
+      setCookie("test", "Cookie exist", 1);
+
+      const test = getCookie("test");
+
+      if (test) {
+        const insertContents = (document.getElementById("container").innerHTML =
+          test);
+      }
+
+      function setCookie(name, value, day) {
+        const date = new Date();
+        date.setTime(date.getTime() + day * 24 * 60 * 60 * 1000);
+        document.cookie =
+          name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
+      }
+
+      function getCookie(name) {
+        const value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return value ? unescape(value[2]) : null;
+      }
+
+      console.log(test); // Cookie exist
+    </script>
+  </body>
+</html>
