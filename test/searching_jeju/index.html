@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주도 맛집 찾기</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">제주도 갈만한 곳 찾기</div>
+        <div class="search">
+          <input id="txt-search" type="text" />
+          <button class="btn-search">검색</button>
+        </div>
+      </div>
+      <div class="body">
+        <div class="total"></div>
+        <div class="list"></div>
+      </div>
+      <div class="paging"></div>
+    </div>
+
+    <div id="item-template" class="item">
+      <!--item : 전체를 감싸는 그룹 객체-->
+      <div class="item-no"></div>
+      <!--item-no : 일련번호-->
+      <div class="item-detail">
+        <!--지점 정보를 감싸주는 그룹 객체-->
+        <div class="item-name"></div>
+        <!--패스트푸드점 이름-->
+        <div class="item-addr"></div>
+        <!--패스트푸드점 주소-->
+      </div>
+    </div>
+    <!--데이터 확인-->
+    <div class="wrap"></div>
+  </body>
+</html>

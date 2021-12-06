@@ -2,98 +2,79 @@
   "list": [
     {
       "name": "국수마당/고기국수",
-      "addr": "제주시 일도2동 1034-19",
-      "detail": "https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%9D%BC%EB%8F%842%EB%8F%99%201034-19?c=14085411.6630130,3962951.5229040,17,0,0,0,dh"
+      "addr": "제주시 일도2동 1034-19"
     },
     {
       "name": "낭푼밥상/가문잔치정식",
-      "addr": "제주시 연동 265-3 ",
-      "detail": "https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%97%B0%EB%8F%99%20265-3/place/38287138?c=14080625.6930134,3959658.8027945,18,0,0,0,dh"
+      "addr": "제주시 연동 265-3 "
     },
     {
       "name": "노조미/텐붓가케우동",
-      "addr": "제주시 연동 1501-15 ",
-      "detail": "https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EC%8B%9C%20%EC%97%B0%EB%8F%99%201501-15/place/1464060205?c=14080800.5425376,3959123.8562254,19,0,0,0,dh"
+      "addr": "제주시 연동 1501-15 "
     },
     {
       "name": "대광식당/함흥비빔냉면",
-      "addr": "제주시 중앙로23길 9",
-      "detail": "https://map.naver.com/v5/search/%EB%8C%80%EA%B4%91%EC%8B%9D%EB%8B%B9/place/16717539?c=14081052.4696772,3962835.8392409,13,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+      "addr": "제주시 중앙로23길 9"
     },
     {
       "name": "도두해녀의집/전복죽, 물회",
-      "addr": "제주시 도두항길 16",
-      "detail": "https://map.naver.com/v5/entry/place/13391363?c=14078170.8533385,3962678.9705730,19,0,0,0,dh"
+      "addr": "제주시 도두항길 16"
     },
     {
       "name": "돈가/흑돼지샤브샤브",
-      "addr": "제주시 문송길 36",
-      "detail": "https://map.naver.com/v5/search/%EC%97%B0%EB%8F%99%20303-41/place/16834402?c=14081556.8248941,3960046.7382908,19,0,0,0,dh"
+      "addr": "제주시 문송길 36"
     },
     {
       "name": "연북로해물탕/해물탕세트",
-      "addr": "오라2동 3100-3",
-      "detail": "https://map.naver.com/v5/search/%EC%98%A4%EB%9D%BC2%EB%8F%99%203100-3/place/38507086?c=14082425.2282418,3959431.5465774,18,0,0,0,dh"
+      "addr": "오라2동 3100-3"
     },
     {
       "name": "모슬포해안도로식당/고등어회",
-      "addr": "제주시 연동 294-46",
-      "detail": "https://map.naver.com/v5/search/%EB%AA%A8%EC%8A%AC%ED%8F%AC%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C%EC%8B%9D%EB%8B%B9/place/37838283?c=14080392.1113259,3959827.5628123,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+      "addr": "제주시 연동 294-46"
     },
     {
       "name": "문게야/문어모둠",
-      "addr": "제주시 동광로23길 23",
-      "detail": "https://map.naver.com/v5/search/%EB%AC%B8%EA%B2%8C%EC%95%BC/place/36511444?c=14086295.8514645,3963444.0158392,15,0,0,0,dh"
+      "addr": "제주시 동광로23길 23"
     },
     {
       "name": "미친부엌/모둠사시미,크림짬뽕",
-      "addr": "제주시 탑동로 15",
-      "detail": "https://map.naver.com/v5/search/%EB%AF%B8%EC%B9%9C%EB%B6%80%EC%97%8C/place/36772248?c=14084025.2900747,3964139.8941620,15,0,0,0,dh"
+      "addr": "제주시 탑동로 15"
     },
     {
         "name": "삼대국수회관/고기국수",
-        "addr": "제주시 일동2동",
-        "detail": "https://map.naver.com/v5/search/%EC%82%BC%EB%8C%80%EA%B5%AD%EC%88%98%ED%9A%8C%EA%B4%80/place/11727502?c=14084333.6450642,3962779.2461202,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 일동2동"
       },
       {
         "name": "생돈우리/흑돼지구이",
-        "addr": "제주시 우평로 38",
-        "detail": "https://map.naver.com/v5/search/%EC%83%9D%EB%8F%88%EC%9A%B0%EB%A6%AC/place/16856198?c=14076730.7798778,3959178.4695307,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 우평로 38"
       },
       {
         "name": "숙성도/교차숙성흑돼지",
-        "addr": "제주시 원노형로 41",
-        "detail": "https://map.naver.com/v5/search/%EC%88%99%EC%84%B1%EB%8F%84/place/1249805999?c=14079313.8930019,3959863.3732468,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 원노형로 41"
       },
       {
         "name": "앞뱅디식당/각재기국",
-        "addr": "제주시 선덕로 32",
-        "detail": "https://map.naver.com/v5/search/%EC%95%9E%EB%B1%85%EB%94%94%EC%8B%9D%EB%8B%B9/place/11797049?c=14081440.9190403,3959899.9178896,15,0,0,0,dh"
+        "addr": "제주시 선덕로 32"
       },
       {
         "name": "연우네/들깨수제비",
-        "addr": "제주시 은수길 110",
-        "detail": "https://map.naver.com/v5/search/%EC%97%B0%EC%9A%B0%EB%84%A4/place/36624342?c=14079606.1957209,3957421.0835064,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 은수길 110"
       },
       {
         "name": "청도/청도해물탕",
-        "addr": "제주시 용담3동 1144",
-        "detail": "https://map.naver.com/v5/search/%EC%9A%A9%EB%8B%B43%EB%8F%99%201144/place/19775378?c=14081538.5796296,3964520.7563896,19,0,0,0,dh"
+        "addr": "제주시 용담3동 1144"
       },
       {
         "name": "하르방밀면/물밀면, 왕만두",
-        "addr": "제주시 지석2길 3",
-        "detail": "https://map.naver.com/v5/search/%ED%95%98%EB%A5%B4%EB%B0%A9%EB%B0%80%EB%A9%B4/place/1006184911?c=14083217.1662313,3964675.2866350,12,0,0,0,dh"
+        "addr": "제주시 지석2길 3"
       },
       {
         "name": "현경식당/순대국밥",
-        "addr": "제주시 동광로1길 32",
-        "detail": "https://map.naver.com/v5/search/%ED%98%84%EA%B2%BD%EC%8B%9D%EB%8B%B9/place/16701312?c=14084066.9235643,3962311.1853118,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 동광로1길 32"
       },
       {
         "name": "ROUTE84/깻잎치킨",
-        "addr": "제주시 우평로 38",
-        "detail": "https://map.naver.com/v5/search/ROUTE84/place/36310674?c=14084233.2348835,3961432.4009617,15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "addr": "제주시 우평로 38"
       }
   ],
   "total": 19
