@@ -4,7 +4,7 @@ const port = 80;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plfain");
-  res.end("Hello World!\n");
+  res.end("Hello World! the server is 01!\n");
 });
 
 server.listen(port, (err) => {
@@ -13,3 +13,10 @@ server.listen(port, (err) => {
   }
   console.log("Server running!");
 });
+
+//forever 시작하기
+//forever start node/server/01.js
+
+
+//forever 끝내기
+//forever stopall
